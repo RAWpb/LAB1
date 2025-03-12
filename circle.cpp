@@ -5,18 +5,22 @@ using namespace std;
 
 // Функция для вычисления длинны окружности
 double calcLenght(double r) {
-    return (2 * 3.14 * r);
+    if (r > 0) return (2 * 3.14 * r);
+    else return 0;
 }
 
 // Функция для вычисления площади круга
 double calcArea(double r) {
-    return (r * r * 3.14);
+    if (r > 0) return (r * r * 3.14);
+    else return 0;
 }
 
 // Функция для вычисления площади кругового сектора
 double calcSecArea(double r, double s) {
     double sector = (360 / s);
+    if (r > 0 and s > 0)
     return (r * r * 3.14) / sector;
+    else return 0;
 }
 
 
