@@ -1,33 +1,35 @@
 ﻿
 #include <iostream>
-
+using namespace std;
 int main()
 {
-    int a, b, c, d, h;
+    double a, b, c, d, h;
     setlocale(LC_ALL, "");
-    std::cout << "Введите стороны трапеции\n";
-    std::cin >> a >> b >> c >> d;
-
-    std::cout << "Введите стороны высоту\n";
-    std::cin >> h;
-    int v;
-    std::cout << "Выберите какую операцию совершить\n" << "1. Периметр\n" << "2. Площадь\n" << "3. Длина средней диагонали\n";
+    cout << "Введите стороны трапеции\n";
+    cin >> a >> b >> c >> d;
+    cout << "Введите высоту\n";
+    cin >> h;
+    if(a<0||b<0||c<0||d<0||h<0){
+    cout << "Было введено отрицательное число";
+    return 0;}
+    double v;
+    cout << "Выберите какую операцию совершить\n" << "1. Периметр\n" << "2. Площадь\n" << "3. Длина средней диагонали\n";
     int z;
-    std::cin >> z;
+    cin >> z;
     switch (z)
     {
     case(1):
         v = a + b + c + d;
-        std::cout << v;
-        break;
+        cout << "периметр - " << v;
+        return 0;
     case(2):
         v = ((a + b) / 2) * h;
-        std::cout << v;
-        break;
+        cout << "площадь - " << v;
+        return 0;
     case(3):
         v = (a + b) / 2;
-        std::cout << v;
-        break;
+        cout << "средняя линия - " << v;
+        return 0;
 
     default:
         break;
